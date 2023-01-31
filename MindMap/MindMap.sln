@@ -5,6 +5,10 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "MindMap", "MindMap.njsproj", "{195FAF01-B4F4-4703-8ABA-A7A003D2D875}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "TestMindMap", "..\TestMindMap\TestMindMap.njsproj", "{28D4404D-DAFA-493F-B000-CE211E81AC81}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Renderer", "..\Renderer\Renderer.njsproj", "{AAF2C721-BCD8-42FA-9460-5A50C1BA9357}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{195FAF01-B4F4-4703-8ABA-A7A003D2D875}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{195FAF01-B4F4-4703-8ABA-A7A003D2D875}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{195FAF01-B4F4-4703-8ABA-A7A003D2D875}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28D4404D-DAFA-493F-B000-CE211E81AC81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28D4404D-DAFA-493F-B000-CE211E81AC81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28D4404D-DAFA-493F-B000-CE211E81AC81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28D4404D-DAFA-493F-B000-CE211E81AC81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAF2C721-BCD8-42FA-9460-5A50C1BA9357}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAF2C721-BCD8-42FA-9460-5A50C1BA9357}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAF2C721-BCD8-42FA-9460-5A50C1BA9357}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAF2C721-BCD8-42FA-9460-5A50C1BA9357}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

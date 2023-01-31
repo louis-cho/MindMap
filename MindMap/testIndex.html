@@ -1,0 +1,38 @@
+<!doctype html>
+<html style="width:100%;height:100%">
+<head>
+    <meta charset="utf-8">
+    <title>MindMap: v001</title>
+
+    <script src="../jquery/jquery-3.6.3.min.js"></script>
+
+    <style id="styles" type="text/css">
+    </style>
+
+</head>
+<body style="width:100%;height:100%">
+    <div id="mindmapapp" style="width:100%;height:100%;"></div>
+
+    <script type="module">
+        /*
+         * @import url("css/mindMap.css"); 을 style 태그 innerHTML로 쓰면,
+         * renderMindMap 객체 생성 이후에 로딩되어 설정이 불가
+         *
+         * => ajax 써서 미리 로딩하게 수정
+         */
+        await $.ajax({
+            url: "css/mindMap.css",
+            dataType: "text",
+            success: function (cssText) {
+                document.getElementById('styles').innerHTML = cssText;
+            }
+        });
+        let appDiv = document.getElementById('mindmapapp');
+        import * as test from './test.js';
+        await test.renderMindMap(appDiv);
+
+    </script>
+
+
+</body>
+</html>

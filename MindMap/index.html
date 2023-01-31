@@ -5,42 +5,29 @@
     <title>MindMap: v001</title>
 </head>
 <body style="width:100%;height:100%">
-    <div id="mindmapapp" style="width:100%;height:100%;overflow-x:hidden;overflow-y:hidden;"></div>
-   
+    <div id="mindmapapp" style="width:100%;height:100%;"></div>
+    <style id="styles" type="text/css">
+        @import url("css/mindMap.css");
+    </style>
     <script type="module">
         import * as THREE from '../build/three.module.js';
+        import { mindMapApp } from './mindMapApp.js';
 
-        let appDiv = document.getElementById("mindmapapp");
-        let renderer = new THREE.WebGLRenderer();
-
-        let scrWidth = appDiv.offsetWidth;
-        let scrHeight = appDiv.offsetHeight;
+        /*
+        let appDiv = document.getElementById('mindmapapp');
 
 
-        let scene = new THREE.Scene();
-        let camera = new THREE.PerspectiveCamera(75, scrWidth / scrHeight, 0.1, 1000);
+        let app = new mindMapApp("mindMap", appDiv);
+        app.initApp();
+        */
 
-        renderer.setSize(scrWidth, scrHeight);
-        appDiv.appendChild(renderer.domElement);
+        let canvasDiv = document.createElement('canvas');
 
-        let geometry = new THREE.BoxGeometry(1, 1, 1);
-        let material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-        let cube = new THREE.Mesh(geometry, material);
+        var ctx = canvasDiv.getContext("2d");
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(0, 0, 150, 75);
 
-        scene.add(cube);
-
-        camera.position.z = 5;
-
-        let animate = function () {
-            requestAnimationFrame(animate);
-
-            cube.rotation.x += 0.01;
-            cube.rotation.y += 0.01;
-
-            renderer.render(scene, camera);
-        };
-
-        animate();
+        appDiv.appendChild(canvasDiv);
     </script>
 
 
